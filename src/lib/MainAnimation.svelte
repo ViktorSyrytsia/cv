@@ -1,18 +1,23 @@
 <script>
-	let cnv;
+	import { animationColor } from './store/animation-color.store';
+	let colors;
+	animationColor.subscribe((value) => {
+		colors = value;
+	});
+	let canvas;
 	setTimeout(() => {
-		if (cnv) {
-			const cnv = document.querySelector(`canvas`);
-			const ctx = cnv.getContext(`2d`);
+		if (canvas) {
+			const canvas = document.querySelector(`canvas`);
+			const ctx = canvas.getContext(`2d`);
 
 			let centerX = 0;
 			let centerY = 0;
 			function init() {
-				cnv.width = innerWidth;
-				cnv.height = innerHeight;
+				canvas.width = innerWidth;
+				canvas.height = innerHeight;
 
-				centerX = cnv.width / 2;
-				centerY = cnv.height / 2;
+				centerX = canvas.width / 2;
+				centerY = canvas.height / 2;
 			}
 			init();
 
@@ -21,7 +26,6 @@
 			const ringRadius = 300;
 			const waveOffset = 19;
 			const velocity = 0.5;
-			const colors = [`#064e3b`, `#047857`, `#10b981`, `#6ee7b7`, `#d1fae5`];
 			// colors.reverse();
 			let startAngle = 0;
 
@@ -72,7 +76,7 @@
 			}
 
 			function loop() {
-				cnv.width |= 0; // ctx.clearRect(0, 0, cnv.width, cnv.height);
+				canvas.width |= 0; // ctx.clearRect(0, 0, canvas.width, canvas.height);
 				updateRings();
 				requestAnimationFrame(loop);
 			}
@@ -86,5 +90,5 @@
 <div
 	class="absolute top-0 bottom-0 left-0 right-0 z-10 flex justify-center items-center min-h-screen opacity-80"
 >
-	<canvas bind:this={cnv} />
+	<canvas bind:this={canvas} />
 </div>

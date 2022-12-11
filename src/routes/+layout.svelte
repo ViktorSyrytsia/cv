@@ -68,6 +68,6 @@
 		height: 200px;
 		top: calc(50% - 100px);
 		left: calc(50% - 100px);
-		@apply absolute z-50 flex justify-center items-center border border-slate-500;
+		@apply absolute z-50 flex justify-center items-center;
 	}
 </style>

@@ -1,6 +1,6 @@
 <div class="p-28 min-h-screen flex justify-between items-end text-gray-900">
-	<div class="text-4xl">Expirience</div>
-	<div class="w-96 text-xl self-start">
+	<div class="text-4xl">Skills</div>
+	<div class="w-96 text-xl self-center">
 		<p>
 			Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, quia eum! Numquam fugiat
 			reprehenderit hic asperiores minus odio a modi mollitia praesentium accusamus maiores,
