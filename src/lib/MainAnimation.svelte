@@ -22,8 +22,8 @@
 			init();
 
 			const numberOfRings = 5;
-			const ringRadiusOffset = 50;
-			const ringRadius = 300;
+			const ringRadiusOffset = 45;
+			const ringRadius = 275;
 			const waveOffset = 19;
 			const velocity = 0.5;
 			// colors.reverse();
@@ -45,7 +45,7 @@
 
 			function drawRing(radius, color, offsetAngle) {
 				ctx.strokeStyle = color;
-				ctx.lineWidth = 2;
+				ctx.lineWidth = 4;
 
 				ctx.beginPath();
 
